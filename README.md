@@ -1,4 +1,15 @@
 <center><font size="4">Team Moo Journal Submission System</font></center><br/>
+<div style="text-align: right">
+<ol><b>Team Members</b></ol>
+<ol>Chuks Nwakanma</ol>
+<ol>KaRynn Li</ol>
+<ol>Kiley Carson</ol>
+<ol>Joseph Sibulo</ol>
+<ol>Bhavan Pahuja</ol>
+</div>
+
+------------
+
 <font size="2">
 <b>The Main.java file is the file that starts the program.</b><br />
 <i> Note: All CSV files must be closed while the program is running.</i><br />
@@ -22,7 +33,7 @@ After the signup page, the user will be directed back to the login page, where t
 <br />
 <hr>
 <br />
-<big>BEFORE THE AUTHOR CAN SUBMIT A JOURNAL</big> 
+<big><b>BEFORE THE AUTHOR CAN SUBMIT A JOURNAL</b></big> 
 <ol>
 <li>The editor must create dropboxes before the authors can submit. 
 In order for the editor to create a dropbox, the editor must first login into the editor account, select the "create dropbox" button which will navigate them to the create dropbox page. Then they can choose a date and a name for the dropbox. If they don’t choose a date for the dropbox then the dropbox will have “no-deadline”. If the editor selects a due date from the current date or from the date in the past then an error message will show and the dropbox will not be created.</li>
@@ -37,7 +48,7 @@ In order for the editor to create a dropbox, the editor must first login into th
 <br />
 <hr>
 <br />
-<big>BEFORE A REVIEWER CAN REVIEW A JOURNAL</big><br/>
+<big><b>BEFORE A REVIEWER CAN REVIEW A JOURNAL</b></big><br/>
 <ol>
 <li>There has to be at least 3 reviewers and 1 author signed up for the system.</li>
 <li>The author has to have submitted a journal. </li>
@@ -63,7 +74,7 @@ And lastly, they will be able to upload their feedback about the journal. This w
 <br />
 <hr>
 <br />
-<big>BEFORE THE AUTHOR CAN GET THEIR FEEDBACK</big>
+<big><b>BEFORE THE AUTHOR CAN GET THEIR FEEDBACK</b></big>
 <ol>
 <li>All the steps in order for the reviewers to receive the journals must have occurred.</li>
 <li>All three reviewers have submitted their reviews on the respective/assigned author’s journal.</li>

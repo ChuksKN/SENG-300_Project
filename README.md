@@ -1,12 +1,11 @@
-<center><font size="4">Team Moo Journal Submission System</font></center><br/>
-<div style="text-align: right">
-<ol><b>Team Members</b></ol>
-<ol>Chuks Nwakanma</ol>
-<ol>KaRynn Li</ol>
-<ol>Kiley Carson</ol>
-<ol>Joseph Sibulo</ol>
-<ol>Bhavan Pahuja</ol>
-</div>
+## Team Moo Journal Submission System
+
+<b>Team Members</b>
+- <ol>Chuks Nwakanma</ol>
+- <ol>KaRynn Li</ol>
+- <ol>Kiley Carson</ol>
+- <ol>Joseph Sibulo</ol>
+- <ol>Bhavan Pahuja</ol>
 
 ------------
 

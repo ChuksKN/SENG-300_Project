@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.editorForReviewerController">
+   <children>
+      <AnchorPane style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="145.0" fitWidth="310.0" layoutX="45.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@TeamLogo.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="398.0" layoutY="44.0" text="Reviews Submitted" textAlignment="CENTER" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="398.0" AnchorPane.rightAnchor="397.0" AnchorPane.topAnchor="44.0">
+               <font>
+                  <Font name="Century Gothic Bold" size="45.0" />
+               </font>
+            </Label>
+            <HBox alignment="TOP_RIGHT" layoutX="961.0" layoutY="37.0" AnchorPane.bottomAnchor="36.0" AnchorPane.leftAnchor="961.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="37.0">
+               <children>
+                  <Button fx:id="home" mnemonicParsing="false" prefHeight="44.0" prefWidth="66.0" style="-fx-background-color: transparent;" text="Home" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="homeIcon" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@HomeIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="notifications" mnemonicParsing="false" prefHeight="43.0" prefWidth="58.0" style="-fx-background-color: transparent;" text="Notifications" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="notificaitonsIcon" blendMode="DARKEN" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 100;">
+                           <image>
+                              <Image url="@NotificationIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="logOut" mnemonicParsing="false" prefHeight="44.0" prefWidth="20.0" style="-fx-background-color: transparent;" text="Log Out" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="logOutIcon" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@LogoutIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="575.0" prefWidth="1280.0" style="-fx-background-color: #3d4956;" VBox.vgrow="ALWAYS">
+         <children>
+            <HBox prefHeight="575.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Reviewers who Have Submitted:" textFill="WHITE" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font name="Century Gothic" size="22.0" />
+                           </font>
+                           <padding>
+                              <Insets top="25.0" />
+                           </padding>
+                        </Label>
+                        <ListView fx:id="listViewID" style="-fx-font-size: 20;" VBox.vgrow="ALWAYS">
+                           <VBox.margin>
+                              <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                           </VBox.margin>
+                        </ListView>
+                     </children>
+                  </VBox>
+                  <GridPane alignment="CENTER_RIGHT" hgap="20.0" HBox.hgrow="ALWAYS">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="338.0" minWidth="10.0" prefWidth="268.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="616.0" minWidth="10.0" prefWidth="264.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="554.0" minWidth="10.0" prefWidth="273.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="554.0" minWidth="0.0" prefWidth="0.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="110.0" minHeight="10.0" prefHeight="90.0" valignment="CENTER" vgrow="ALWAYS" />
+                        <RowConstraints maxHeight="126.0" minHeight="10.0" prefHeight="80.0" valignment="CENTER" vgrow="ALWAYS" />
+                        <RowConstraints maxHeight="169.0" minHeight="10.0" prefHeight="89.0" valignment="CENTER" vgrow="ALWAYS" />
+                        <RowConstraints maxHeight="239.0" minHeight="7.0" prefHeight="111.0" valignment="CENTER" vgrow="ALWAYS" />
+                        <RowConstraints maxHeight="171.0" minHeight="0.0" prefHeight="33.0" valignment="CENTER" vgrow="ALWAYS" />
+                        <RowConstraints maxHeight="185.0" minHeight="10.0" prefHeight="108.0" valignment="CENTER" vgrow="ALWAYS" />
+                        <RowConstraints maxHeight="171.0" minHeight="0.0" prefHeight="32.0" valignment="CENTER" vgrow="ALWAYS" />
+                     </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" text="Reviewer #1" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <font>
+                              <Font name="Century Gothic" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" text="Reviewer #2" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <font>
+                              <Font name="Century Gothic" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" text="Reviewer #3" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <font>
+                              <Font name="Century Gothic" size="25.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="rev1Info" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <font>
+                              <Font name="Century Gothic" size="25.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="rev2Info" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <font>
+                              <Font name="Century Gothic" size="25.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="rev3Info" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <font>
+                              <Font name="Century Gothic" size="25.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="rev1Decision" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <font>
+                              <Font name="Century Gothic" size="25.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="rev2Decision" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <font>
+                              <Font name="Century Gothic" size="25.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="rev3Decision" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <font>
+                              <Font name="Century Gothic" size="25.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="viewReviewer1sFeedback" alignment="CENTER" mnemonicParsing="false" prefHeight="100.0" prefWidth="300.0" text="View Reviewer 1's&#10;Feedback" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="viewReviewer2sFeedback" alignment="CENTER" mnemonicParsing="false" prefHeight="100.0" prefWidth="300.0" text="View Reviewer 2's&#10;Feedback" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="viewReviewer3sFeedback" alignment="CENTER" mnemonicParsing="false" prefHeight="100.0" prefWidth="300.0" text="View Reviewer 3's &#10;Feedback" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="submitButton" alignment="CENTER" mnemonicParsing="false" onAction="#onSubmitClick" prefHeight="100.0" prefWidth="300.0" text="Submit" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Button>
+                        <ComboBox fx:id="decisionByEditor" promptText="Final Evaluation Result:" style="-fx-font-size: 18;" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                        <Button fx:id="uploadButton" alignment="CENTER" mnemonicParsing="false" onAction="#onUploadClick" prefHeight="100.0" prefWidth="300.0" text="Upload Combined &#10;Feedback" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="uploadCombinedFeedback" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="244.0" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="chooseFinalEvalResultError" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="244.0" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="uploadCombinedFeedbackError" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="244.0" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="25.0" left="9.0" right="25.0" top="25.0" />
+                     </HBox.margin>
+                  </GridPane>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

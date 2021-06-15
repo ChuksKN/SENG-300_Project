@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.authorMainController">
+   <children>
+      <AnchorPane style="-fx-background-color: white;" VBox.vgrow="NEVER">
+         <children>
+            <ImageView fitHeight="145.0" fitWidth="310.0" layoutX="45.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@TeamLogo.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="398.0" layoutY="44.0" text="Author" textAlignment="CENTER" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="398.0" AnchorPane.rightAnchor="397.0" AnchorPane.topAnchor="44.0">
+               <font>
+                  <Font name="Century Gothic Bold" size="45.0" />
+               </font>
+            </Label>
+            <HBox alignment="TOP_RIGHT" layoutX="961.0" layoutY="37.0" AnchorPane.bottomAnchor="36.0" AnchorPane.leftAnchor="961.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="37.0">
+               <children>
+                  <Button fx:id="home" mnemonicParsing="false" prefHeight="44.0" prefWidth="66.0" style="-fx-background-color: transparent;" text="Home" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="homeIcon" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@HomeIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="notifications" mnemonicParsing="false" prefHeight="43.0" prefWidth="58.0" style="-fx-background-color: transparent;" text="Notifications" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="notificaitonsIcon" blendMode="DARKEN" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 100;">
+                           <image>
+                              <Image url="@NotificationIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="logOut" mnemonicParsing="false" prefHeight="44.0" prefWidth="20.0" style="-fx-background-color: transparent;" text="Log Out" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="logOutIcon" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@LogoutIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="575.0" prefWidth="1280.0" style="-fx-background-color: #3d4956;" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox alignment="CENTER" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Welcome to the Journal Submission System.&#10;&#10;Please choose if you want to submit a journal&#10;or view feedback on your submissions.&#10;" textAlignment="CENTER" textFill="WHITE" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="Century Gothic" size="35.0" />
+                     </font>
+                  </Label>
+                  <GridPane hgap="25.0" vgap="25.0" VBox.vgrow="ALWAYS">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ComboBox fx:id="dropboxForUploadJournal" promptText="List Of Dropboxes" style="-fx-font-size: 25;" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                        <Button fx:id="uploadJournalNext" mnemonicParsing="false" style="-fx-border-radius: 0;" text="Upload Journal" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Button>
+                        <ComboBox fx:id="dropboxForDownloadFeedback" promptText="List Of Journals" style="-fx-font-size: 25;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                        <Button fx:id="viewFeedbackNext" mnemonicParsing="false" style="-fx-border-radius: 0;" text="View Feedback" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                     </padding>
+                  </GridPane>
+               </children>
+               <padding>
+                  <Insets top="50.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.reviewerNotificationController">
+   <children>
+      <AnchorPane style="-fx-background-color: white;" VBox.vgrow="NEVER">
+         <children>
+            <ImageView fitHeight="145.0" fitWidth="310.0" layoutX="45.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@TeamLogo.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="398.0" layoutY="44.0" text="Notifications" textAlignment="CENTER" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="398.0" AnchorPane.rightAnchor="397.0" AnchorPane.topAnchor="44.0">
+               <font>
+                  <Font name="Century Gothic Bold" size="45.0" />
+               </font>
+            </Label>
+            <HBox alignment="TOP_RIGHT" layoutX="961.0" layoutY="37.0" AnchorPane.bottomAnchor="36.0" AnchorPane.leftAnchor="961.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="37.0">
+               <children>
+                  <Button fx:id="home" mnemonicParsing="false" prefHeight="44.0" prefWidth="66.0" style="-fx-background-color: transparent;" text="Home" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="homeIcon" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@HomeIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="notifications" mnemonicParsing="false" prefHeight="43.0" prefWidth="58.0" style="-fx-background-color: transparent;" text="Notifications" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="notificaitonsIcon" blendMode="DARKEN" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 100;">
+                           <image>
+                              <Image url="@NotificationIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="logOut" mnemonicParsing="false" prefHeight="44.0" prefWidth="20.0" style="-fx-background-color: transparent;" text="Log Out" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="logOutIcon" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@LogoutIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="575.0" prefWidth="1280.0" style="-fx-background-color: #3d4956;" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ListView fx:id="listViewID" prefHeight="475.0" prefWidth="979.0" style="-fx-font-size: 20;" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="50.0" left="150.0" right="150.0" top="25.0" />
+                     </VBox.margin>
+                  </ListView>
+               </children>
+               <padding>
+                  <Insets top="25.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

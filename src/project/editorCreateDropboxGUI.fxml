@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.editorCreateDropboxController">
+   <children>
+      <AnchorPane style="-fx-background-color: white;" VBox.vgrow="NEVER">
+         <children>
+            <ImageView fitHeight="145.0" fitWidth="310.0" layoutX="45.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@TeamLogo.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="425.0" layoutY="38.0" text="Create Dropbox" textAlignment="CENTER" AnchorPane.leftAnchor="425.0" AnchorPane.rightAnchor="425.0">
+               <font>
+                  <Font name="Century Gothic Bold" size="55.0" />
+               </font>
+            </Label>
+            <HBox alignment="TOP_RIGHT" layoutX="961.0" layoutY="37.0" AnchorPane.bottomAnchor="36.0" AnchorPane.leftAnchor="961.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="37.0">
+               <children>
+                  <Button fx:id="home" mnemonicParsing="false" prefHeight="44.0" prefWidth="66.0" style="-fx-background-color: transparent;" text="Home" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="homeIcon" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@HomeIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="notifications" mnemonicParsing="false" prefHeight="43.0" prefWidth="58.0" style="-fx-background-color: transparent;" text="Notifications" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="notificaitonsIcon" blendMode="DARKEN" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 100;">
+                           <image>
+                              <Image url="@NotificationIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="logOut" mnemonicParsing="false" prefHeight="44.0" prefWidth="20.0" style="-fx-background-color: transparent;" text="Log Out" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="logOutIcon" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@LogoutIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="575.0" prefWidth="1280.0" style="-fx-background-color: #3d4956;" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox alignment="CENTER" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label alignment="CENTER" text="Please choose a date if you want the dropbox to have a deadline.&#10;&#10;For dropboxes with no deadline, leave date empty and click submit.&#10;" textAlignment="CENTER" textFill="WHITE" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="Century Gothic" size="35.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="50.0" top="25.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="384.0" prefWidth="1280.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox alignment="CENTER" spacing="25.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <ListView fx:id="dropboxList" style="-fx-font-size: 20;" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets top="25.0" />
+                                 </VBox.margin></ListView>
+                              <Button fx:id="closeDropbox" mnemonicParsing="false" style="-fx-background-color: #ff652f;" text="Close Dropbox" textAlignment="CENTER" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="25.0" left="25.0" right="25.0" />
+                           </padding>
+                        </VBox>
+                        <GridPane alignment="CENTER" HBox.hgrow="ALWAYS">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="634.0" minWidth="10.0" prefWidth="532.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <DatePicker fx:id="deadlinePicker" style="-fx-font-size: 20;" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                              <TextField fx:id="dropboxName" promptText="Enter a name for the dropbox" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="submit" alignment="CENTER" mnemonicParsing="false" style="-fx-border-radius: 0; -fx-background-color: #14a75c;" text="Submit" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="25.0" left="25.0" right="50.0" top="25.0" />
+                           </HBox.margin>
+                        </GridPane>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
